@@ -15,6 +15,8 @@
 		CD0BEF1526BCB021005E9D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0BEF1326BCB021005E9D4B /* LaunchScreen.storyboard */; };
 		CD0BEF2026BCB022005E9D4B /* SecretDemoClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0BEF1F26BCB022005E9D4B /* SecretDemoClientTests.swift */; };
 		CD0BEF2B26BCB022005E9D4B /* SecretDemoClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0BEF2A26BCB022005E9D4B /* SecretDemoClientUITests.swift */; };
+		CD0BEF6826BCBEEF005E9D4B /* MyOneFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0BEF6326BCBCE4005E9D4B /* MyOneFramework.framework */; };
+		CD0BEF6926BCBEEF005E9D4B /* MyOneFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD0BEF6326BCBCE4005E9D4B /* MyOneFramework.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CD0BEF6A26BCBEEF005E9D4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD0BEF6926BCBEEF005E9D4B /* MyOneFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CD0BEF0526BCB01A005E9D4B /* SecretDemoClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretDemoClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0BEF0826BCB01A005E9D4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		CD0BEF2626BCB022005E9D4B /* SecretDemoClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretDemoClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0BEF2A26BCB022005E9D4B /* SecretDemoClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretDemoClientUITests.swift; sourceTree = "<group>"; };
 		CD0BEF2C26BCB022005E9D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0BEF6326BCBCE4005E9D4B /* MyOneFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyOneFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0BEF6826BCBEEF005E9D4B /* MyOneFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +117,7 @@
 		CD0BEF0726BCB01A005E9D4B /* SecretDemoClient */ = {
 			isa = PBXGroup;
 			children = (
+				CD0BEF6326BCBCE4005E9D4B /* MyOneFramework.framework */,
 				CD0BEF0826BCB01A005E9D4B /* AppDelegate.swift */,
 				CD0BEF0A26BCB01A005E9D4B /* SceneDelegate.swift */,
 				CD0BEF0C26BCB01A005E9D4B /* ViewController.swift */,
@@ -138,6 +157,7 @@
 				CD0BEF0126BCB01A005E9D4B /* Sources */,
 				CD0BEF0226BCB01A005E9D4B /* Frameworks */,
 				CD0BEF0326BCB01A005E9D4B /* Resources */,
+				CD0BEF6A26BCBEEF005E9D4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,6 +458,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DD2T5H8Q5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SecretDemoClient",
+				);
 				INFOPLIST_FILE = SecretDemoClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +482,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DD2T5H8Q5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SecretDemoClient",
+				);
 				INFOPLIST_FILE = SecretDemoClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
